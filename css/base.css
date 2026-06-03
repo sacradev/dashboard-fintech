@@ -1,0 +1,71 @@
+/* ==========================================================================
+   1. DESIGN TOKENS (VARIÁVEIS GLOBAIS - PALETA VERMELHO ~ PRETO)
+   ========================================================================== */
+:root {
+    /* Família do Vermelho */
+    --cor-fundo-escuro: hsl(0, 0%, 10%);
+    /* "preto" que é vermelho escuro */
+    --cor-primaria: hsl(0, 85%, 40%);
+    /* vermelho principal */
+    --cor-primaria-hover: hsl(0, 85%, 33%);
+    /* vermelho mais escuro pro hover */
+    --cor-primaria-suave: hsl(0, 85%, 96%);
+    /* quase branco rosado pra fundos de card */
+
+    /* Neutros */
+    --cor-branca: hsl(0, 0%, 100%);
+    --cor-texto-claro: hsl(0, 0%, 92%);
+    /* texto sobre fundo escuro */
+    --cor-texto-escuro: hsl(0, 5%, 20%);
+    /* texto sobre fundo claro */
+    --cor-borda: hsl(0, 10%, 88%);
+
+    /* Semânticas */
+    --cor-positivo: hsl(142, 60%, 40%);
+    /* verde pra saldo positivo */
+    --cor-negativo: hsl(0, 85%, 40%);
+    /* já é o vermelho principal */
+}
+
+/* ==========================================================================
+   2. RESET UNIVERSAL & ACESSIBILIDADE
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Impede que bordas e preenchimentos quebrem o tamanho das caixas */
+}
+
+/* ==========================================================================
+   3. RESETS GLOBAIS DE TAGS 
+   ========================================================================== */
+ul,
+ol {
+    list-style: none;
+    /* Remove globalmente as bolinhas pretas das listas */
+}
+
+a {
+    text-decoration: none;
+    /* Remove globalmente o sublinhado padrão dos links */
+    color: inherit;
+    /* Faz o link herdar a cor do elemento onde ele está inserido */
+}
+
+/* ==========================================================================
+   4. ESTILOS BASE DO SISTEMA
+   ========================================================================== */
+html {
+    scroll-behavior: smooth;
+    /* Faz a rolagem dos links do menu deslizar suavemente */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Espaçamento confortável entre linhas de leitura */
+}

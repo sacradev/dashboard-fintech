@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SacraBank</title>
+
+    <meta name="description" content="">
+
+
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+
+    <!-- Importação da fonte Inter -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Olá, Euclides! Bem vindo ao Sacrabank!</h1>
+        </header>
+        <nav aria-label="Menu Principal">
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#extrato">Extrato</a></li>
+
+                <li><a href="#pix">Área Pix</a></li>
+                <li><a href="#pagamentos">Pagamentos</a></li>
+                <li><a href="#cartoes">Cartões</a></li>
+
+                <li><a href="#investimentos">Investimentos</a></li>
+                <li><a href="#credito">Empréstimos</a></li>
+                <li><a href="#planejamento">Metas</a></li>
+
+                <li><a href="#perfil">Meus Dados</a></li>
+                <li><a href="#seguranca">Segurança</a></li>
+                <li><a href="#open-finance">Open Finance</a></li>
+
+                <li><a href="#suporte">Suporte</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="saldos">
+                <article class="saldo">
+                    <p>100 real</p>
+                </article>
+                <article class="limite">
+                    <p>liso dorme</p>
+                </article>
+                <article class="fatura">
+                    <p>vai vender a casa</p>
+                </article>
+            </div>
+            <section>
+                <form action="#">
+                    <fieldset>
+                        <legend>Transferências</legend>
+                        <div class="campo-grupo">
+                            <label for="valor-transferido">Valor da transferência R$: </label>
+                            <input type="number" name="valor-transferido" id="valor-transferido">
+                        </div>
+                        <div class="opcao-grupo">Tipo de Transação:
+                            <label class="opcao-selecao">
+                                <input type="radio" name="transacao" value="PIX"> PIX
+                            </label>
+                            <label class="opcao-selecao">
+                                <input type="radio" name="transacao" value="TED"> TED
+                            </label>
+                            <label class="opcao-selecao">
+                                <input type="radio" name="transacao" value="DOC"> DOC
+                            </label>
+                        </div>
+                        <div class="opcao-grupo">
+                            <label class="opcao-selecao">
+                                <input type="checkbox" name="salvar-contato" value="salvar"> Salvar este contato para
+                                futuras transferências?
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">Transferir</button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+body {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+}
+
+header {
+    grid-column: span 2;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro)
+}
+
+nav {
+    grid-column: 1;
+}
+
+main {
+    grid-column: 2;
+}
+
+.saldos {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.saldo, .limite, .fatura{
+    border: solid 1px;
+    padding: .5rem;
+    border-radius: 5%;
+}
