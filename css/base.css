@@ -59,13 +59,12 @@ a {
 html {
     scroll-behavior: smooth;
     /* Faz a rolagem dos links do menu deslizar suavemente */
+    
 }
 
 body {
     font-family: 'Inter', sans-serif;
     color: var(--cor-texto-escuro);
     line-height: 1.6;
-    max-width: 1200px;
-    margin: 0 auto;
-    /* Espaçamento confortável entre linhas de leitura */
+    
 }

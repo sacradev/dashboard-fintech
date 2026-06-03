@@ -1,20 +1,29 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
     display: grid;
     grid-template-columns: 14rem 1fr;
+    
 }
 
 header {
     grid-column: span 2;
-    background-color: var(--cor-primaria);
-    color: var(--cor-texto-claro)
 }
 
 nav {
     grid-column: 1;
+    
+    
 }
 
 main {
     grid-column: 2;
+    
 }
 
 .saldos {
@@ -28,3 +37,4 @@ main {
     padding: .5rem;
     border-radius: 5%;
 }
+
