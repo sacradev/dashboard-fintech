@@ -1,16 +1,43 @@
+/* ==========================================================================
+   1. HEADER
+   ========================================================================== */
+
 header {
     /* Definição cores do header*/
     background-color: var(--cor-primaria);
     color: var(--cor-texto-claro);
-    border-radius: 5px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
 }
 
+header h1 {
+    font-size: 1.35rem;
+    /* Tamanho refinado, sem gritar na tela */
+    font-weight: 500;
+    /* Peso médio para um ar mais moderno */
+    color: var(--cor-branca);
+}
+
+img {
+    border-radius: 50%;
+    border: solid 3px var(--cor-ouro);
+}
+
+.nome-cliente {
+    color: var(--cor-ouro)
+}
+
+/* ==========================================================================
+   2. NAVEGAÇÃO
+   ========================================================================== */
+
 nav {
     /*cores e estilos menu nav*/
-    background-color: var(--cor-fundo-escuro);
-    color: var(--cor-texto-claro);
-    border-radius: 5px;
+    background-color: var(--cor-superficie-card);
+    color: var(--cor-texto-principal);
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
 
 }
 
@@ -24,46 +51,83 @@ nav ul li a:hover {
     border-radius: 8px;
 }
 
+/*Estilização subgrid*/
+
 main {
     /*estilos bloco main*/
-    background-color: var(--cor-fundo-escuro);
+    background-color: var(--cor-texto-claro);
     border-radius: 5px;
 }
 
-/*definição semantica de cores dos cards de saldo*/
+/* ==========================================================================
+   3. ESTILIZAÇÃO CARDS
+   ========================================================================== */
 
-.saldo {
+.card {
+
+    background-color: var(--cor-superficie-card);
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.card-label {
+    font-size: 1rem;
+    color: var(--cor-texto-mutado);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin: 0;
+}
+
+.card-valor {
+    font-size: 1.6rem;
+    /* Fonte robusta */
+    font-weight: 700;
+    /* Bold pesado (Inter) */
+    margin: 0;
+}
+
+/* Cores Semânticas baseadas nas classes específicas */
+.saldo .card-valor {
     color: var(--cor-positivo);
+    /* Verde Sport para dinheiro em conta */
 }
 
-.limite,
-.fatura {
-    color: var(--cor-negativo);
+.limite .card-valor {
+    color: var(--cor-primaria);
 }
 
+.fatura .card-valor {
+    color: var(--cor-primaria);
+    /* Vermelho Sport indicando o débito */
+}
 
-.formulario form {
+/* ==========================================================================
+   4. ESTILIZAÇÃO FORMULÁRIO
+   ========================================================================== */
+
+.transferencia form {
+    background-color: var(--cor-superficie-card);
+    border-radius: 1rem;
+    padding: 2rem;
     /*Cor texto do formulário*/
     color: var(--cor-texto-claro);
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
 }
 
-fieldset {
-    /*exclusao da borda do fielset*/
-    padding-top: 1.28rem;
-    border: none;
+.opcao-selecao input,
+.opcao-selecao span {
+    color: var(--cor-texto-principal);
+    cursor: pointer;
 }
 
-legend {
-    /*estilização da legenda*/
-    font-weight: 700;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.campo-grupo,
-.opcao-grupo {
-    /*adequação do espaço entre itens do formulário*/
-    margin-bottom: 1rem;
+.transferencia label {
+  color: var(--cor-texto-principal); 
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: block;
 }
 
 .campo-grupo input[type="number"] {
@@ -71,19 +135,21 @@ legend {
 
     width: 100%;
     padding: 0.8rem 1rem;
-    background-color: var(--cor-primaria-suave);
-    border: 3px solid var(--cor-primaria);
-    border-radius: 5px;
-    color: var(--cor-texto-escuro);
+    background-color: var(--cor-fundo);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: .5rem;
+    padding: 1rem;
+    color: var(--cor-texto-principal);
     margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: border-color 0.3s ease;
 }
 
-
-.campo-grupo input[type="number"]:focus,
-.campo-grupo input[type="number"]:focus-visible {
-    /*aplicação de focus*/
+.campo-grupo input[type="number"]:focus {
     outline: none;
-    border: 3px solid var(--cor-borda);
+    border-color: var(--cor-ouro);
+    /* Detalhe em dourado */
 }
 
 .opcao-selecao {
@@ -91,27 +157,43 @@ legend {
     accent-color: var(--cor-primaria);
 }
 
-.opcao-selecao span {
-    /*mudança de cursor ao passar nos botões e labels*/
-    cursor: pointer;
+/* ==========================================================================
+   5. ESTILIZAÇÃO FIELDSET
+   ========================================================================== */
+
+.transferencia fieldset {
+  border: none;
 }
+
+.transferencia legend {
+  color: var(--cor-texto-principal);   /* Off-white limpo */
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  border: none;                        /* Remove linhas nativas do navegador */
+  padding: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+   6. ESTILIZAÇÃO BOTÃO
+   ========================================================================== */
 
 .btn-enviar {
     /*estilização do botão transferir*/
-    width: 100%;
-    padding: 1rem;
+    background-color: var(--cor-primaria);
+    color: #ffffff;
     border: none;
-    border-radius: 4px;
-    background-color: var(--cor-fundo-escuro);
-    outline: none;
-    border: 3px solid var(--cor-primaria);
-    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    padding: 1.2rem 2.5rem;
+    font-size: 1rem;
     font-weight: 700;
-    color: var(--cor-primaria-suave);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.05rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    
 }
 
 .btn-enviar:hover,

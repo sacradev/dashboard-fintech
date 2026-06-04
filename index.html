@@ -28,11 +28,12 @@
 <body>
     <div class="container">
         <header>
-            <h1>Olá, Euclides! Bem vindo ao Sacrabank.</h1>
+            <img src="./images/barlleta-foco.jpg" alt="foto do cliente Barlletinha">
+            <h1>Olá, <span class="nome-cliente">Barlleta</span>! Bem vindo ao Sacrabank.</h1>
         </header>
         <nav aria-label="Menu Principal">
             <ul>
-                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#extrato">Extrato</a></li>
 
                 <li><a href="#pix">Área Pix</a></li>
@@ -51,24 +52,31 @@
             </ul>
         </nav>
         <main>
-            <div class="saldos">
-                <article class="saldo">
-                    <p><h3>Saldo</h3> R$ 2.000,00</p>
-                </article>
-                <article class="limite">
-                    <p><h3>Limite:</h3>R$: -1.500,00</p>
-                </article>
-                <article class="fatura">
-                    <p><h3>Fatura:</h3>R$ 3.900,00</p>
-                </article>
-            </div>
-            <section class="formulario">
+
+            <article class="card saldo">
+
+                <p class="card-label">Saldo</p>
+                <p class="card-valor"> R$ 2.000,00</p>
+            </article>
+            <article class="card limite">
+
+                <p class="card-label">Limite:</p>
+                <p class="card-valor">R$: -1.500,00</p>
+            </article>
+            <article class="card fatura">
+
+                <p class="card-label">Fatura:</p>
+                <p class="card-valor">R$ 3.900,00</p>
+            </article>
+
+            <section class="transferencia">
                 <form action="#">
                     <fieldset class="campo">
                         <legend>Transferências</legend>
                         <div class="campo-grupo">
                             <label for="valor-transferido">Valor da transferência: </label>
-                            <input type="number" name="valor-transferido" id="valor-transferido" placeholder="R$ 1.000,00" required>
+                            <input type="number" name="valor-transferido" id="valor-transferido"
+                                placeholder="R$ 1.000,00" required>
                         </div>
                         <div class="opcao-grupo">
                             <label class="opcao-selecao">
@@ -83,8 +91,8 @@
                         </div>
                         <div class="opcao-grupo">
                             <label class="opcao-selecao">
-                                <input type="checkbox" name="salvar-contato" value="salvar"> Salvar este contato para
-                                futuras transferências?
+                                <input type="checkbox" name="salvar-contato" value="salvar"> <span>Salvar este contato para
+                                futuras transferências?</span>
                             </label>
                         </div>
 

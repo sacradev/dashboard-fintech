@@ -1,30 +1,61 @@
+/* ==========================================================================
+   1. CENTRALIZAÇÃO DO DASHBOARD
+   ========================================================================== */
+
 body {
     /*Centralização do dashboard*/
-
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
+/* ==========================================================================
+   2. CRIAÇÃO DO GRID PRINCIPAL
+   ========================================================================== */
+
 .container {
     /*Aplicação do grid*/
     display: grid;
-    grid-template-columns: 14rem 1fr;
-    gap: 10px;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+    column-gap: 1.5rem;
+    row-gap: 0;
+    align-items: stretch;
 }
+
+/* ==========================================================================
+   3. ALOCAÇÃO DO HEADER
+   ========================================================================== */
 
 header {
     /*alocação do header nas duas primeiras linhas*/
-    grid-column: span 2;
+    grid-area: header;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 2rem;
+    height: 5.5rem;
 }
+
+header img {
+    flex-shrink: 0;
+    width: 5rem;
+    height: 5rem;
+}
+
+/* ==========================================================================
+   2. ALOCAÇÃO NAVEGAÇÃO
+   ========================================================================== */
 
 nav {
     /*Alocação do menu na segunda linha, primeira coluna.*/
-    grid-column: 1;
-    align-content: center;
+    grid-area: sidebar;
+    width: 250px;
+    height: 100%;
 }
 
 nav ul {
@@ -37,46 +68,86 @@ nav ul li {
     padding: .5rem;
 }
 
+
+/* ==========================================================================
+   3. CRIAÇÃO DO GRID SECUNDÁRIO
+   ========================================================================== */
+
 main {
-    /*Organização vertical dos componentes na main para que ocupem o espaço uniformimente*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    grid-column: 2;
-    padding: 1.5rem;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+
+    grid-template-areas:
+        "saldo limite fatura"
+        "pix pix pix";
+
+    gap: 1.3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0px;
 }
 
-.saldos {
-    /*alinhamento dos cards de saldo*/
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
+
+/* ==========================================================================
+   3. ALOCAÇÃO CARDS
+   ========================================================================== */
+
+.saldo {
+    grid-area: saldo;
 }
 
-.saldo,
-.limite,
+.limite {
+    grid-area: limite;
+}
+
 .fatura {
-    /*definição dos cards, alinhamnento de conteúdo interno*/
-    border: solid 1px;
-    padding: .5rem;
-    border-radius: 8px;
-    width: 100%;
-    min-width: 120px;
+    grid-area: fatura;
+}
 
+.card {
+    /*definição dos cards, alinhamnento de conteúdo interno*/
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
-form {
-    padding: 1rem;
+/* ==========================================================================
+   3. ALOCAÇÃO ÁREA DE TRANSFERENCIAS
+   ========================================================================== */
+
+.transferencia {
+    grid-area: pix;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
+
+.transferencia fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* O espaçamento agora age direto entre a label, as opções e o botão */
+}
+
+/* Alinhando PIX, TED e DOC lado a lado */
 
 .opcao-grupo {
     /*alinhamento dos botões seletores*/
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Alinhamento interno de cada opção (Selecionável + Texto) */
+
+.opcao-selecao {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }

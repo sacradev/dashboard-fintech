@@ -2,29 +2,27 @@
    1. DESIGN TOKENS (VARIÁVEIS GLOBAIS - PALETA VERMELHO ~ PRETO)
    ========================================================================== */
 :root {
-    /* Família do Vermelho */
-    --cor-fundo-escuro: hsl(0, 0%, 10%);
-    /* "preto" que é vermelho escuro */
-    --cor-primaria: hsl(0, 85%, 40%);
-    /* vermelho principal */
-    --cor-primaria-hover: hsl(0, 85%, 33%);
-    /* vermelho mais escuro pro hover */
-    --cor-primaria-suave: hsl(0, 85%, 96%);
-    /* quase branco rosado pra fundos de card */
+    /* 🖤 A Base Rubro-Negra (Tons de Preto e Grafite) */
+    --cor-fundo-escuro: hsl(0, 4%, 8%);      /* Preto profundo e quente para o fundo da página */
+    --cor-superficie: hsl(0, 3%, 13%);        /* O fundo do 'main' e dos cards (Bento Grid) */
+    --cor-superficie-card: hsl(0, 2%, 18%);   /* Um degrau mais claro para dar profundidade aos cards */
 
-    /* Neutros */
-    --cor-branca: hsl(0, 0%, 100%);
-    --cor-texto-claro: hsl(0, 0%, 92%);
-    /* texto sobre fundo escuro */
-    --cor-texto-escuro: hsl(0, 5%, 20%);
-    /* texto sobre fundo claro */
-    --cor-borda: hsl(0, 10%, 88%);
+    /* ❤️ As Cores de Marca (O Vermelho do Sport) */
+    --cor-primaria: hsl(354, 85%, 44%);       /* Vermelho vivo institucional do clube */
+    --cor-primaria-hover: hsl(354, 85%, 35%); /* Vermelho mais denso para interações e hovers */
+    --cor-primaria-suave: hsl(354, 25%, 15%); /* Vermelho escuro/queimado para fundos sutis */
 
-    /* Semânticas */
-    --cor-positivo: hsl(142, 60%, 40%);
-    /* verde pra saldo positivo */
-    --cor-negativo: hsl(0, 85%, 40%);
-    /* já é o vermelho principal */
+    /* 👑 A Terciária de Elite (O Ouro do Leão) */
+    --cor-ouro: hsl(45, 100%, 52%);           /* Dourado/Amarelo vivo para destaques pontuais */
+    --cor-ouro-suave: hsl(45, 40%, 15%);      /* Fundo dourado escuro para badges ou alertas */
+
+    /* 📄 Tipografia e Contrastes */
+    --cor-texto-principal: hsl(0, 0%, 95%);   /* Branco lavado (Inter) - Altíssima leitura */
+    --cor-texto-mutado: hsl(0, 0%, 70%);      /* Cinza claro para labels (ex: o texto "Saldo") */
+    --cor-borda: hsl(0, 0%, 22%);             /* Linhas divisórias extremamente discretas */
+
+    /* 🟢 Semântica Financeira */
+    --cor-positivo: hsl(145, 65%, 45%);       /* Verde equilibrado para saldo positivo */
 }
 
 /* ==========================================================================
