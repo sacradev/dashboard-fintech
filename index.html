@@ -28,7 +28,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>Olá, Euclides! Bem vindo ao Sacrabank!</h1>
+            <h1>Olá, Euclides! Bem vindo ao Sacrabank.</h1>
         </header>
         <nav aria-label="Menu Principal">
             <ul>
@@ -53,32 +53,32 @@
         <main>
             <div class="saldos">
                 <article class="saldo">
-                    <p>100 real</p>
+                    <p><h3>Saldo</h3> R$ 2.000,00</p>
                 </article>
                 <article class="limite">
-                    <p>liso dorme</p>
+                    <p><h3>Limite:</h3>R$: -1.500,00</p>
                 </article>
                 <article class="fatura">
-                    <p>vai vender a casa</p>
+                    <p><h3>Fatura:</h3>R$ 3.900,00</p>
                 </article>
             </div>
-            <section>
+            <section class="formulario">
                 <form action="#">
-                    <fieldset>
+                    <fieldset class="campo">
                         <legend>Transferências</legend>
                         <div class="campo-grupo">
-                            <label for="valor-transferido">Valor da transferência R$: </label>
-                            <input type="number" name="valor-transferido" id="valor-transferido">
+                            <label for="valor-transferido">Valor da transferência: </label>
+                            <input type="number" name="valor-transferido" id="valor-transferido" placeholder="R$ 1.000,00" required>
                         </div>
-                        <div class="opcao-grupo">Tipo de Transação:
+                        <div class="opcao-grupo">
                             <label class="opcao-selecao">
-                                <input type="radio" name="transacao" value="PIX"> PIX
+                                <input type="radio" name="transacao" value="PIX" required> <span>PIX</span>
                             </label>
                             <label class="opcao-selecao">
-                                <input type="radio" name="transacao" value="TED"> TED
+                                <input type="radio" name="transacao" value="TED"> <span>TED</span>
                             </label>
                             <label class="opcao-selecao">
-                                <input type="radio" name="transacao" value="DOC"> DOC
+                                <input type="radio" name="transacao" value="DOC"> <span>DOC</span>
                             </label>
                         </div>
                         <div class="opcao-grupo">

@@ -1,4 +1,6 @@
 body {
+    /*Centralização do dashboard*/
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,35 +8,75 @@ body {
 }
 
 .container {
+    /*Aplicação do grid*/
     display: grid;
     grid-template-columns: 14rem 1fr;
-    
+    gap: 10px;
 }
 
 header {
+    /*alocação do header nas duas primeiras linhas*/
     grid-column: span 2;
+    display: flex;
+    justify-content: center;
 }
 
 nav {
+    /*Alocação do menu na segunda linha, primeira coluna.*/
     grid-column: 1;
-    
-    
+    align-content: center;
+}
+
+nav ul {
+    /*espaçamento interno para desafogar do grid*/
+    padding: 1rem;
+}
+
+nav ul li {
+    /*espaçamento entre links*/
+    padding: .5rem;
 }
 
 main {
+    /*Organização vertical dos componentes na main para que ocupem o espaço uniformimente*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     grid-column: 2;
-    
+    padding: 1.5rem;
 }
 
 .saldos {
+    /*alinhamento dos cards de saldo*/
     display: flex;
-    gap: 20px;
-    
+    gap: 10px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-.saldo, .limite, .fatura{
+.saldo,
+.limite,
+.fatura {
+    /*definição dos cards, alinhamnento de conteúdo interno*/
     border: solid 1px;
     padding: .5rem;
-    border-radius: 5%;
+    border-radius: 8px;
+    width: 100%;
+    min-width: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+form {
+    padding: 1rem;
+}
+
+.opcao-grupo {
+    /*alinhamento dos botões seletores*/
+    display: flex;
+    justify-content: space-around;
+}
